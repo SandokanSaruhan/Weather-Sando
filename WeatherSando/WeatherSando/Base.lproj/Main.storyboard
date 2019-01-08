@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Light.otf">
+            <string>ProximaNova-Light</string>
+        </array>
+        <array key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+        <array key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherSando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNW-sX-2jd">
+                                <rect key="frame" x="170" y="319" width="35" height="29"/>
+                                <viewLayoutGuide key="safeArea" id="KlP-cB-G7p"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.18615797162055969" green="0.56756871938705444" blue="0.99945217370986938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IkH-wt-qKI" kind="presentation" id="Xnb-nR-7QH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XNW-sX-2jd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R6E-j6-BcV"/>
+                            <constraint firstItem="XNW-sX-2jd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="icH-3V-2IV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="-120"/>
+        </scene>
+        <!--Forecast-->
+        <scene sceneID="t25-sP-j75">
+            <objects>
+                <viewController id="Ocu-xp-g1u" customClass="SecondViewController" customModule="WeatherSando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JRr-3t-BdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="38o-Mg-fj8">
+                                <rect key="frame" x="0.0" y="43" width="375" height="581"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u0F-mv-ied">
+                                        <rect key="frame" x="0.0" y="-8" width="375" height="582"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <viewLayoutGuide key="safeArea" id="cj8-CL-4lM"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForecastCell" rowHeight="90" id="yj4-oi-I3Z" customClass="ForecastDayTableViewCell" customModule="WeatherSando" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yj4-oi-I3Z" id="nu6-DS-l05">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kf0-78-0xh">
+                                                            <rect key="frame" x="25" y="14" width="61" height="61"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bls-aZ-27s">
+                                                            <rect key="frame" x="275" y="15" width="76" height="58.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="50"/>
+                                                            <color key="textColor" red="0.2156862745" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gjA-zM-RcN">
+                                                            <rect key="frame" x="110" y="24" width="120" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YVn-18-5H1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-jF-g3C">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="120" id="Vbe-Yh-sNu"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="24"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain Showers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-pZ-qav">
+                                                                            <rect key="frame" x="0.0" y="24" width="120" height="16"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="120" id="Zrv-vQ-K63"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <inset key="separatorInset" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <connections>
+                                                    <outlet property="temperatureLabel" destination="Bls-aZ-27s" id="tHX-uC-rNv"/>
+                                                    <outlet property="weatherConditionImageView" destination="Kf0-78-0xh" id="MYG-Bu-Nrb"/>
+                                                    <outlet property="weatherConditionLabel" destination="Ncx-pZ-qav" id="Nhf-sb-mSU"/>
+                                                    <outlet property="weekdayLabel" destination="2e8-jF-g3C" id="3BK-1l-p86"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Ocu-xp-g1u" id="PLE-5R-9El"/>
+                                            <outlet property="delegate" destination="Ocu-xp-g1u" id="RRG-cJ-xLz"/>
+                                            <outlet property="prefetchDataSource" destination="Ocu-xp-g1u" id="JGk-hT-csS"/>
+                                        </connections>
+                                    </tableView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VKB-NE-xLZ">
+                                        <rect key="frame" x="176.33333333333326" y="280.66666666666652" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="38o-Mg-fj8" secondAttribute="height" multiplier="375:581" id="JDT-Ro-UNe"/>
+                                    <constraint firstAttribute="width" constant="375" id="cyr-8O-BMS"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="38o-Mg-fj8" firstAttribute="centerX" secondItem="JRr-3t-BdJ" secondAttribute="centerX" id="BWs-hY-syG"/>
+                            <constraint firstItem="38o-Mg-fj8" firstAttribute="centerY" secondItem="JRr-3t-BdJ" secondAttribute="centerY" id="iAA-wK-vy2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NCd-qz-BxT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="ForecastIconInactive" selectedImage="ForecastIcon" id="FTp-7S-bhR"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="VKB-NE-xLZ" id="6uG-dh-sZS"/>
+                        <outlet property="tableView" destination="u0F-mv-ied" id="vWv-8A-hFz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmi-Gr-Qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488.80000000000001" y="457.42128935532236"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="Tvd-lK-a95">
+            <objects>
+                <viewController id="He4-ul-dh7" customClass="FirstViewController" customModule="WeatherSando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ml-l3-co2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YW2-eX-zoF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1y-kc-k13">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="242"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yaI-vi-KnA">
+                                                <rect key="frame" x="141" y="159" width="95" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurrentLocation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lo-m8-6vc">
+                                                        <rect key="frame" x="0.0" y="3" width="12" height="12"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-aK-HKh">
+                                                        <rect key="frame" x="17" y="0.0" width="78" height="18"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bmR-mX-3RX">
+                                                <rect key="frame" x="106" y="190" width="164" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="-°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dCu-UI-hzz">
+                                                        <rect key="frame" x="0.0" y="2" width="48" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="48" id="Fqo-bf-D5C"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="30"/>
+                                                        <color key="textColor" red="0.2156862745" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="LineBlue" translatesAutoresizingMaskIntoConstraints="NO" id="kgI-vS-D0I">
+                                                        <rect key="frame" x="58" y="2" width="48" height="30"/>
+                                                        <color key="tintColor" red="0.81960784310000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="19" id="KSO-98-UfH"/>
+                                                            <constraint firstAttribute="height" constant="30" id="KdR-Vo-Jiu"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="FzL-jn-Ktn">
+                                                        <rect key="frame" x="116" y="0.0" width="48" height="34"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="34"/>
+                                                        <color key="textColor" red="0.2156862745" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UO4-3G-cC2">
+                                                <rect key="frame" x="-0.20000000000004547" y="71" width="376" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prg-aX-UMT">
+                                        <rect key="frame" x="0.0" y="484" width="375" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-dN-pcj">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="29.999999999999972"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="22"/>
+                                                <state key="normal" title="Share">
+                                                    <color key="titleColor" red="1" green="0.53333333329999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shareButtonPressed:" destination="He4-ul-dh7" eventType="touchUpInside" id="VJn-ry-qHX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uS2-M8-lb9">
+                                        <rect key="frame" x="0.0" y="234" width="375" height="242"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Divider" translatesAutoresizingMaskIntoConstraints="NO" id="TIQ-Hi-BNQ" userLabel="Divider">
+                                                <rect key="frame" x="119" y="27.000000000000227" width="137.99999999999994" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Divider" translatesAutoresizingMaskIntoConstraints="NO" id="3j1-qA-PM2" userLabel="Divider">
+                                                <rect key="frame" x="114" y="199" width="147" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RW8-hl-GTY">
+                                                <rect key="frame" x="110.26183844011143" y="73.000000000000114" width="153.5" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="T0g-bw-oP2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="153.5" height="60"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CDf-qr-uFP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="60"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Humidity" translatesAutoresizingMaskIntoConstraints="NO" id="HkU-S7-ATm">
+                                                                        <rect key="frame" x="3.5" y="0.0" width="30" height="30"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-eX-Yiy">
+                                                                        <rect key="frame" x="10" y="30" width="17" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T0H-bs-mep">
+                                                                <rect key="frame" x="58.5" y="0.0" width="36.5" height="60"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Precipitation" translatesAutoresizingMaskIntoConstraints="NO" id="pXR-hN-Gcd">
+                                                                        <rect key="frame" x="3.5" y="0.0" width="30" height="30"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- mm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZB-es-WjJ">
+                                                                        <rect key="frame" x="0.5" y="30" width="36" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ih6-0X-q8e">
+                                                                <rect key="frame" x="117" y="0.0" width="36.5" height="60"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pressure" translatesAutoresizingMaskIntoConstraints="NO" id="qC0-ju-nUr">
+                                                                        <rect key="frame" x="3.5" y="0.0" width="30" height="30"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- hPa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zWW-lB-phv">
+                                                                        <rect key="frame" x="0.0" y="30" width="36.5" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="uiB-fB-t1f">
+                                                <rect key="frame" x="131" y="161" width="112" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Fa-Qp-fEE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wind" translatesAutoresizingMaskIntoConstraints="NO" id="5OJ-Pt-t2n">
+                                                                <rect key="frame" x="7.5" y="0.0" width="30" height="30"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- km/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="TEs-2J-V34">
+                                                                <rect key="frame" x="0.0" y="30" width="45" height="30"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PLD-H9-9RH">
+                                                        <rect key="frame" x="67" y="0.0" width="45" height="60"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WindDirection" translatesAutoresizingMaskIntoConstraints="NO" id="uxM-oH-EL4">
+                                                                <rect key="frame" x="7.5" y="0.0" width="30" height="30"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqm-PB-yFY">
+                                                                <rect key="frame" x="20" y="30" width="5" height="30"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="3v8-aK-2tq"/>
+                                    <constraint firstAttribute="width" secondItem="YW2-eX-zoF" secondAttribute="height" multiplier="375:667" id="GJk-Qb-wVP"/>
+                                    <constraint firstAttribute="width" constant="375" id="XBp-6R-aNK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YW2-eX-zoF" firstAttribute="centerY" secondItem="8ml-l3-co2" secondAttribute="centerY" id="6Bn-YH-6X7"/>
+                            <constraint firstItem="YW2-eX-zoF" firstAttribute="centerX" secondItem="8ml-l3-co2" secondAttribute="centerX" id="xmF-LD-nUz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YL0-FH-NJu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Today" image="TodayIconInactive" selectedImage="TodayIcon" id="Uoy-GG-RRN"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="R1b-aK-HKh" id="8cb-Mu-yqE"/>
+                        <outlet property="humidityLabel" destination="u8x-eX-Yiy" id="hHY-gm-7ed"/>
+                        <outlet property="precipitationLabel" destination="CZB-es-WjJ" id="D2V-df-t6V"/>
+                        <outlet property="pressureLabel" destination="zWW-lB-phv" id="By9-si-hvE"/>
+                        <outlet property="temperatureLabel" destination="dCu-UI-hzz" id="88P-cf-bpe"/>
+                        <outlet property="weatherConditionLabel" destination="FzL-jn-Ktn" id="zAh-bF-0ON"/>
+                        <outlet property="weatherImageView" destination="UO4-3G-cC2" id="Obw-GC-7lE"/>
+                        <outlet property="windDirectionLabel" destination="hqm-PB-yFY" id="CoN-6R-qn1"/>
+                        <outlet property="windSpeedLabel" destination="TEs-2J-V34" id="Mg0-ri-4qj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3Q-gh-NDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488.80000000000001" y="-668.81559220389806"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9fz-LN-R9b">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IkH-wt-qKI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bCN-km-cjC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="He4-ul-dh7" kind="relationship" relationship="viewControllers" id="KID-bV-Q1V"/>
+                        <segue destination="Ocu-xp-g1u" kind="relationship" relationship="viewControllers" id="x8X-gW-1eb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bre-HH-Qoh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="-120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogo" width="512" height="512"/>
+        <image name="CurrentLocation" width="12" height="12"/>
+        <image name="Divider" width="110" height="1"/>
+        <image name="ForecastIcon" width="25" height="25"/>
+        <image name="ForecastIconInactive" width="25" height="25"/>
+        <image name="Humidity" width="30" height="30"/>
+        <image name="LineBlue" width="6" height="60"/>
+        <image name="Precipitation" width="30" height="30"/>
+        <image name="Pressure" width="30" height="30"/>
+        <image name="TodayIcon" width="25" height="25"/>
+        <image name="TodayIconInactive" width="25" height="25"/>
+        <image name="Wind" width="30" height="30"/>
+        <image name="WindDirection" width="30" height="30"/>
+    </resources>
+</document>

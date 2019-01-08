@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4090027E21B41F9F009BD86F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4090027D21B41F9E009BD86F /* GoogleService-Info.plist */; };
+		4090028121B42021009BD86F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028021B42021009BD86F /* Constants.swift */; };
+		4090028421B420A4009BD86F /* OpenWeatherMapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028321B420A4009BD86F /* OpenWeatherMapError.swift */; };
+		4090028621B420B0009BD86F /* OpenWeatherMapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028521B420B0009BD86F /* OpenWeatherMapClient.swift */; };
+		4090028821B42188009BD86F /* FirebaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028721B42188009BD86F /* FirebaseProvider.swift */; };
+		4090028B21B42220009BD86F /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028A21B42220009BD86F /* Coordinate.swift */; };
+		4090028D21B4225F009BD86F /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028C21B4225F009BD86F /* WeatherIcon.swift */; };
+		4090028F21B4229A009BD86F /* TodayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090028E21B4229A009BD86F /* TodayWeather.swift */; };
+		4090029121B422EA009BD86F /* ForecastWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090029021B422EA009BD86F /* ForecastWeather.swift */; };
+		4090029321B4231B009BD86F /* TodayWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090029221B4231B009BD86F /* TodayWeatherViewModel.swift */; };
+		4090029521B423B5009BD86F /* ForecastWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090029421B423B5009BD86F /* ForecastWeatherViewModel.swift */; };
+		4090029721B4270B009BD86F /* ForecastDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090029621B4270B009BD86F /* ForecastDayTableViewCell.swift */; };
+		4090029D21B447C1009BD86F /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4090029921B447C0009BD86F /* ProximaNova-Bold.otf */; };
+		4090029E21B447C1009BD86F /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4090029A21B447C0009BD86F /* ProximaNova-Light.otf */; };
+		4090029F21B447C1009BD86F /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4090029B21B447C0009BD86F /* ProximaNova-Regular.otf */; };
+		409002A021B447C1009BD86F /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4090029C21B447C0009BD86F /* ProximaNova-Semibold.otf */; };
+		40F4548021B14436009488B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4547F21B14436009488B7 /* AppDelegate.swift */; };
+		40F4548221B14436009488B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4548121B14436009488B7 /* ViewController.swift */; };
+		40F4548521B14436009488B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F4548321B14436009488B7 /* Main.storyboard */; };
+		40F4548821B14436009488B7 /* WeatherSando.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40F4548621B14436009488B7 /* WeatherSando.xcdatamodeld */; };
+		40F4548A21B14439009488B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F4548921B14439009488B7 /* Assets.xcassets */; };
+		40F4548D21B14439009488B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F4548B21B14439009488B7 /* LaunchScreen.storyboard */; };
+		40F4549621B14FDC009488B7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4549521B14FDC009488B7 /* FirstViewController.swift */; };
+		40F4549821B15692009488B7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4549721B15692009488B7 /* SecondViewController.swift */; };
+		68D28B5303CE730C3D151336 /* Pods_WeatherSando.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160CF35C1B0E106EEC1C325E /* Pods_WeatherSando.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13213E76AB8F1D5AE62C5282 /* Pods-WeatherSando.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherSando.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherSando/Pods-WeatherSando.release.xcconfig"; sourceTree = "<group>"; };
+		160CF35C1B0E106EEC1C325E /* Pods_WeatherSando.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherSando.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4090027D21B41F9E009BD86F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4090028021B42021009BD86F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4090028321B420A4009BD86F /* OpenWeatherMapError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapError.swift; sourceTree = "<group>"; };
+		4090028521B420B0009BD86F /* OpenWeatherMapClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapClient.swift; sourceTree = "<group>"; };
+		4090028721B42188009BD86F /* FirebaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProvider.swift; sourceTree = "<group>"; };
+		4090028A21B42220009BD86F /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		4090028C21B4225F009BD86F /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
+		4090028E21B4229A009BD86F /* TodayWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeather.swift; sourceTree = "<group>"; };
+		4090029021B422EA009BD86F /* ForecastWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeather.swift; sourceTree = "<group>"; };
+		4090029221B4231B009BD86F /* TodayWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherViewModel.swift; sourceTree = "<group>"; };
+		4090029421B423B5009BD86F /* ForecastWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherViewModel.swift; sourceTree = "<group>"; };
+		4090029621B4270B009BD86F /* ForecastDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDayTableViewCell.swift; sourceTree = "<group>"; };
+		4090029921B447C0009BD86F /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		4090029A21B447C0009BD86F /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		4090029B21B447C0009BD86F /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		4090029C21B447C0009BD86F /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		40F4547C21B14436009488B7 /* WeatherSando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherSando.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F4547F21B14436009488B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40F4548121B14436009488B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40F4548421B14436009488B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40F4548721B14436009488B7 /* WeatherSando.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherSando.xcdatamodel; sourceTree = "<group>"; };
+		40F4548921B14439009488B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40F4548C21B14439009488B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40F4548E21B14439009488B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F4549521B14FDC009488B7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		40F4549721B15692009488B7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		949DF56FB57564EB03A65D53 /* Pods-WeatherSando.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherSando.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherSando/Pods-WeatherSando.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40F4547921B14436009488B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68D28B5303CE730C3D151336 /* Pods_WeatherSando.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4090027F21B41FD7009BD86F /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				4090028021B42021009BD86F /* Constants.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		4090028221B4205B009BD86F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4090028321B420A4009BD86F /* OpenWeatherMapError.swift */,
+				4090028521B420B0009BD86F /* OpenWeatherMapClient.swift */,
+				4090028721B42188009BD86F /* FirebaseProvider.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4090028921B421B7009BD86F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4090028A21B42220009BD86F /* Coordinate.swift */,
+				4090028C21B4225F009BD86F /* WeatherIcon.swift */,
+				4090028E21B4229A009BD86F /* TodayWeather.swift */,
+				4090029021B422EA009BD86F /* ForecastWeather.swift */,
+				4090029221B4231B009BD86F /* TodayWeatherViewModel.swift */,
+				4090029421B423B5009BD86F /* ForecastWeatherViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4090029821B447C0009BD86F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4090029921B447C0009BD86F /* ProximaNova-Bold.otf */,
+				4090029A21B447C0009BD86F /* ProximaNova-Light.otf */,
+				4090029B21B447C0009BD86F /* ProximaNova-Regular.otf */,
+				4090029C21B447C0009BD86F /* ProximaNova-Semibold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		40F4547321B14436009488B7 = {
+			isa = PBXGroup;
+			children = (
+				40F4547E21B14436009488B7 /* WeatherSando */,
+				40F4547D21B14436009488B7 /* Products */,
+				4EA63E90619BE61230FE4870 /* Pods */,
+				43BC341DC0FD1F5D012F2C74 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40F4547D21B14436009488B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40F4547C21B14436009488B7 /* WeatherSando.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40F4547E21B14436009488B7 /* WeatherSando */ = {
+			isa = PBXGroup;
+			children = (
+				40F4547F21B14436009488B7 /* AppDelegate.swift */,
+				40F4548121B14436009488B7 /* ViewController.swift */,
+				40F4549521B14FDC009488B7 /* FirstViewController.swift */,
+				40F4549721B15692009488B7 /* SecondViewController.swift */,
+				4090029621B4270B009BD86F /* ForecastDayTableViewCell.swift */,
+				4090027F21B41FD7009BD86F /* Plugins */,
+				4090028221B4205B009BD86F /* API */,
+				4090028921B421B7009BD86F /* Models */,
+				40F4548E21B14439009488B7 /* Info.plist */,
+				4090027D21B41F9E009BD86F /* GoogleService-Info.plist */,
+				40F4548321B14436009488B7 /* Main.storyboard */,
+				40F4548B21B14439009488B7 /* LaunchScreen.storyboard */,
+				40F4548921B14439009488B7 /* Assets.xcassets */,
+				4090029821B447C0009BD86F /* Font */,
+				40F4548621B14436009488B7 /* WeatherSando.xcdatamodeld */,
+			);
+			path = WeatherSando;
+			sourceTree = "<group>";
+		};
+		43BC341DC0FD1F5D012F2C74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				160CF35C1B0E106EEC1C325E /* Pods_WeatherSando.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EA63E90619BE61230FE4870 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				949DF56FB57564EB03A65D53 /* Pods-WeatherSando.debug.xcconfig */,
+				13213E76AB8F1D5AE62C5282 /* Pods-WeatherSando.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40F4547B21B14436009488B7 /* WeatherSando */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F4549121B1443A009488B7 /* Build configuration list for PBXNativeTarget "WeatherSando" */;
+			buildPhases = (
+				C03495DF6104674B2DA084A0 /* [CP] Check Pods Manifest.lock */,
+				40F4547821B14436009488B7 /* Sources */,
+				40F4547921B14436009488B7 /* Frameworks */,
+				40F4547A21B14436009488B7 /* Resources */,
+				36D33B436CB48AB2453F199C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeatherSando;
+			productName = WeatherSando;
+			productReference = 40F4547C21B14436009488B7 /* WeatherSando.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40F4547421B14436009488B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Saruhan Köle";
+				TargetAttributes = {
+					40F4547B21B14436009488B7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 40F4547721B14436009488B7 /* Build configuration list for PBXProject "WeatherSando" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40F4547321B14436009488B7;
+			productRefGroup = 40F4547D21B14436009488B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40F4547B21B14436009488B7 /* WeatherSando */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40F4547A21B14436009488B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F4548D21B14439009488B7 /* LaunchScreen.storyboard in Resources */,
+				4090029F21B447C1009BD86F /* ProximaNova-Regular.otf in Resources */,
+				4090027E21B41F9F009BD86F /* GoogleService-Info.plist in Resources */,
+				40F4548A21B14439009488B7 /* Assets.xcassets in Resources */,
+				40F4548521B14436009488B7 /* Main.storyboard in Resources */,
+				4090029D21B447C1009BD86F /* ProximaNova-Bold.otf in Resources */,
+				4090029E21B447C1009BD86F /* ProximaNova-Light.otf in Resources */,
+				409002A021B447C1009BD86F /* ProximaNova-Semibold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36D33B436CB48AB2453F199C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeatherSando/Pods-WeatherSando-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherSando/Pods-WeatherSando-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C03495DF6104674B2DA084A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherSando-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40F4547821B14436009488B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F4548221B14436009488B7 /* ViewController.swift in Sources */,
+				4090029721B4270B009BD86F /* ForecastDayTableViewCell.swift in Sources */,
+				40F4548021B14436009488B7 /* AppDelegate.swift in Sources */,
+				40F4548821B14436009488B7 /* WeatherSando.xcdatamodeld in Sources */,
+				4090029321B4231B009BD86F /* TodayWeatherViewModel.swift in Sources */,
+				4090029521B423B5009BD86F /* ForecastWeatherViewModel.swift in Sources */,
+				40F4549821B15692009488B7 /* SecondViewController.swift in Sources */,
+				4090028821B42188009BD86F /* FirebaseProvider.swift in Sources */,
+				4090028621B420B0009BD86F /* OpenWeatherMapClient.swift in Sources */,
+				4090028421B420A4009BD86F /* OpenWeatherMapError.swift in Sources */,
+				4090028D21B4225F009BD86F /* WeatherIcon.swift in Sources */,
+				4090029121B422EA009BD86F /* ForecastWeather.swift in Sources */,
+				40F4549621B14FDC009488B7 /* FirstViewController.swift in Sources */,
+				4090028121B42021009BD86F /* Constants.swift in Sources */,
+				4090028F21B4229A009BD86F /* TodayWeather.swift in Sources */,
+				4090028B21B42220009BD86F /* Coordinate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40F4548321B14436009488B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40F4548421B14436009488B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40F4548B21B14439009488B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40F4548C21B14439009488B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40F4548F21B14439009488B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40F4549021B1443A009488B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40F4549221B1443A009488B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 949DF56FB57564EB03A65D53 /* Pods-WeatherSando.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5D7Q3C5UG;
+				INFOPLIST_FILE = WeatherSando/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sando.WeatherSando;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40F4549321B1443A009488B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13213E76AB8F1D5AE62C5282 /* Pods-WeatherSando.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5D7Q3C5UG;
+				INFOPLIST_FILE = WeatherSando/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sando.WeatherSando;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40F4547721B14436009488B7 /* Build configuration list for PBXProject "WeatherSando" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F4548F21B14439009488B7 /* Debug */,
+				40F4549021B1443A009488B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F4549121B1443A009488B7 /* Build configuration list for PBXNativeTarget "WeatherSando" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F4549221B1443A009488B7 /* Debug */,
+				40F4549321B1443A009488B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40F4548621B14436009488B7 /* WeatherSando.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40F4548721B14436009488B7 /* WeatherSando.xcdatamodel */,
+			);
+			currentVersion = 40F4548721B14436009488B7 /* WeatherSando.xcdatamodel */;
+			path = WeatherSando.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 40F4547421B14436009488B7 /* Project object */;
+}
