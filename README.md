@@ -49,6 +49,8 @@ You should find `OpenWeatherMapClient.swift` file and put your appid in the line
 * Xcode 10.1
 * iOS 11+
 
+![](WeatherSandoDemo.gif)
+
 
 
 
